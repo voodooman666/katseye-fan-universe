@@ -1,11 +1,41 @@
 const members = [
-  { id: "daniela", name: "Daniela", initial: "D", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Daniela_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/daniela_avanzini/", charm: "Guardian Shield", charmNote: "Courage, loyalty and a protective heart.", fact: "A 2025 Netflix Tudum member guide notes that she is double-jointed in her left hand.", glow: "rgba(241,151,192,.45)", shade: "#493047" },
-  { id: "lara", name: "Lara", initial: "L", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Lara_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/lararajj/", charm: "Limitless Key", charmNote: "Curiosity, compassion and a love of discovery.", fact: "Netflix Tudum’s 2025 member guide describes her as having near-perfect pitch.", glow: "rgba(198,168,255,.42)", shade: "#39304e" },
-  { id: "manon", name: "Manon", initial: "M", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Manon_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/meretmanon/", charm: "Stellar Tiara", charmNote: "Warmth, grace and quiet confidence.", fact: "A fun detail shared in Netflix Tudum’s 2025 member guide: she can wiggle her ears.", glow: "rgba(234,175,208,.42)", shade: "#4a3046" },
-  { id: "megan", name: "Megan", initial: "M", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Megan_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/meganskiendiel/", charm: "Dual Cherry", charmNote: "Wit, confidence and lively energy.", fact: "Netflix Tudum’s 2025 member guide says she began learning hula and Tahitian dance very young.", glow: "rgba(199,180,255,.4)", shade: "#39334d" },
-  { id: "sophia", name: "Sophia", initial: "S", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Sophia_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/sophia_laforteza/", charm: "Dream Anchor", charmNote: "Kindness, steadiness and thoughtful guidance.", fact: "One instrument Sophia has said she would love to learn is the violin.", glow: "rgba(245,174,202,.4)", shade: "#4b303e" },
-  { id: "yoonchae", name: "Yoonchae", initial: "Y", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Yoonchae_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/y0on_cha3/", charm: "Soothing Shell", charmNote: "Authenticity, gentleness and a calm presence.", fact: "Netflix Tudum’s 2025 member guide says she enjoys drawing what music inspires her to imagine.", glow: "rgba(187,171,255,.4)", shade: "#37304a" }
+  { id: "daniela", name: "Daniela", initial: "D", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Daniela_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/daniela_avanzini/", charm: "Guardian Shield", charmNote: "Courage, loyalty and a protective heart.", bio: "Daniela is from Atlanta, Georgia, and began dancing as a young child. Her early ballroom experience included appearances on America’s Got Talent and So You Think You Can Dance: The Next Generation. She later joined Dream Academy, where the November 2023 finale named her among KATSEYE’s six members.", fact: "A 2025 Netflix Tudum member guide notes that she is double-jointed in her left hand.", glow: "rgba(241,151,192,.45)", shade: "#493047" },
+  { id: "lara", name: "Lara", initial: "L", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Lara_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/lararajj/", charm: "Limitless Key", charmNote: "Curiosity, compassion and a love of discovery.", bio: "Lara is a first-generation Indian American artist who grew up in Los Angeles. She has described dreaming about pop music from an early age and feeling most at home in a recording studio. Before KATSEYE, she worked in television and music, including a campaign for Michelle Obama’s Global Girls Alliance, and competed on Dream Academy.", fact: "Netflix Tudum’s 2025 member guide describes her as having near-perfect pitch.", glow: "rgba(198,168,255,.42)", shade: "#39304e" },
+  { id: "manon", name: "Manon", initial: "M", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Manon_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/meretmanon/", charm: "Stellar Tiara", charmNote: "Warmth, grace and quiet confidence.", bio: "Manon is from Lucerne, Switzerland, and has spoken about how her family’s Swiss, Italian and Ghanaian backgrounds shaped her perspective. She began writing songs as a teenager and took part in Dream Academy before being selected for KATSEYE at the 2023 finale. Her story brings songwriting and a mix of cultural influences into the group’s international lineup.", fact: "A fun detail shared in Netflix Tudum’s 2025 member guide: she can wiggle her ears.", glow: "rgba(234,175,208,.42)", shade: "#4a3046" },
+  { id: "megan", name: "Megan", initial: "M", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Megan_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/meganskiendiel/", charm: "Dual Cherry", charmNote: "Wit, confidence and lively energy.", bio: "Megan grew up in Honolulu, Hawaii, and started dancing at a young age. As a child she also enjoyed modeling, acting and playing the ukulele; she began learning hula and Tahitian dance when she was very young. She later trained and performed on Dream Academy, where she earned a place in KATSEYE’s final lineup.", fact: "Netflix Tudum’s 2025 member guide says she began learning hula and Tahitian dance very young.", glow: "rgba(199,180,255,.4)", shade: "#39334d" },
+  { id: "sophia", name: "Sophia", initial: "S", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Sophia_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/sophia_laforteza/", charm: "Dream Anchor", charmNote: "Kindness, steadiness and thoughtful guidance.", bio: "Sophia is from Manila, Philippines, and has been singing since she was a young child. She speaks English and Tagalog, and brought years of singing experience to Dream Academy. She was announced as a member of KATSEYE at the program’s November 2023 finale.", fact: "One instrument Sophia has said she would love to learn is the violin.", glow: "rgba(245,174,202,.4)", shade: "#4b303e" },
+  { id: "yoonchae", name: "Yoonchae", initial: "Y", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Yoonchae_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/y0on_cha3/", charm: "Soothing Shell", charmNote: "Authenticity, gentleness and a calm presence.", bio: "Yoonchae is from Seoul, South Korea, and joined Dream Academy as one of its youngest contestants. She has said she hopes to grow into an artist who can inspire an audience. Away from performing, she enjoys listening to music and drawing the images it brings to mind; she was selected for KATSEYE at the program’s finale.", fact: "Netflix Tudum’s 2025 member guide says she enjoys drawing what music inspires her to imagine.", glow: "rgba(187,171,255,.4)", shade: "#37304a" }
 ];
+// Birthday data and ages are checked against artist-managed profile listings on 30 October 2026.
+// Heights, countries and zodiac signs are from Netflix Tudum's Dream Academy-era member guide.
+const memberFacts = {
+  daniela: { fullName: "Daniela Avanzini", hometown: "Atlanta, Georgia, USA", country: "United States", birthday: "2004-07-01", height: "5 ft 4 in (reported in Tudum’s 2025 guide)", zodiac: "Cancer" },
+  lara: { fullName: "Lara Raj", hometown: "Los Angeles, California, USA", country: "United States", birthday: "2005-11-03", height: "5 ft 6 in (reported in Tudum’s 2025 guide)", zodiac: "Scorpio" },
+  manon: { fullName: "Manon Bannerman", hometown: "Lucerne, Switzerland", country: "Switzerland", birthday: "2002-06-26", height: "5 ft 5 in (reported in Tudum’s 2025 guide)", zodiac: "Cancer" },
+  megan: { fullName: "Megan Skiendiel", hometown: "Honolulu, Hawaii, USA", country: "United States", birthday: "2006-02-10", height: "5 ft 6 in (reported in Tudum’s 2025 guide)", zodiac: "Aquarius" },
+  sophia: { fullName: "Sophia Laforteza", hometown: "Manila, Philippines", country: "Philippines", birthday: "2002-12-31", height: "5 ft 6 in (reported in Tudum’s 2025 guide)", zodiac: "Capricorn" },
+  yoonchae: { fullName: "Yoonchae Jeung", hometown: "Seoul, South Korea", country: "South Korea", birthday: "2007-12-06", height: "5 ft 5 in (reported in Tudum’s 2025 guide)", zodiac: "Sagittarius" }
+};
+const notVerified = "Not listed in the verified profiles checked";
+function currentAge(birthday) {
+  const [year, month, day] = birthday.split("-").map(Number);
+  const now = new Date();
+  let age = now.getFullYear() - year;
+  if (now.getMonth() + 1 < month || (now.getMonth() + 1 === month && now.getDate() < day)) age--;
+  return age;
+}
+function renderProfileFacts(id) {
+  const facts = memberFacts[id];
+  const member = members.find(item => item.id === id);
+  if (!facts || !member) return;
+  const rows = [
+    ["Full public name", facts.fullName], ["From", facts.hometown], ["Country listed", facts.country],
+    ["Date of birth", facts.birthday], ["Age", `${currentAge(facts.birthday)} · calculated from date of birth`],
+    ["Height", facts.height], ["Star sign", facts.zodiac], ["Favorite food", notVerified],
+    ["Favorite color", notVerified], ["Natural hair color", notVerified], ["Eye color", notVerified]
+  ];
+  document.querySelector("#profile-facts").innerHTML = rows.map(([label, value]) => `<div class="profile-fact-row"><dt>${label}</dt><dd>${value}</dd></div>`).join("");
+}
 const tourEvents = [
   ["2026-10-30", "30 Oct 2026", "Bell Centre", "Montreal, Canada"], ["2026-11-01", "1 Nov 2026", "TD Coliseum", "Hamilton, Canada"],
   ["2026-11-03", "3 Nov 2026", "Little Caesars Arena", "Detroit, USA"], ["2026-11-05", "5 Nov 2026", "United Center", "Chicago, USA"],
@@ -107,6 +137,8 @@ function renderMemberProfile(id) {
   const member = members.find(item => item.id === id);
   if (!member) return;
   document.querySelector("#profile-name").textContent = member.name;
+  document.querySelector("#profile-bio").textContent = member.bio;
+  renderProfileFacts(id);
   document.querySelector("#profile-charm").textContent = member.charm;
   document.querySelector("#profile-charm-note").textContent = member.charmNote;
   document.querySelector("#profile-fact").textContent = member.fact;
