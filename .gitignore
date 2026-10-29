@@ -1,3 +1,5 @@
 # Never include scratch work or generated deliverables in the public deployment.
 /work/
 /outputs/
+/.gradle/
+/app/build/

@@ -36,6 +36,14 @@ This is an installable Progressive Web App (PWA), not a native APK. It is hosted
 
 On Android, open the HTTPS site in Chrome and choose the browser menu → Install app (or Add to Home screen). On iPhone, open it in Safari and choose Share → Add to Home Screen.
 
+## Android APK
+
+The repository also contains a small Android WebView wrapper. GitHub Actions builds a sideloadable debug APK at no charge when Android wrapper files change or when the workflow is run manually. Open the repository's **Actions → Build Android APK** run and download the `katseye-fan-universe-android-apk` artifact. GitHub keeps that artifact for 30 days. Transfer the APK to the Android phone, open it, and approve Android's install-from-this-source prompt if shown.
+
+The wrapper loads the hosted app, so it needs an internet connection. Favourites remain on that phone/browser's local storage. It blocks ticket and shopping URLs and opens only the app's approved official/social links outside the app. This is a debug-signed sideload build, not a Play Store release. Future builds from a fresh GitHub runner use a different debug signing key; to install a later build, uninstall the old app first (this also removes its local app data/favourites), then install the new APK.
+
+The free PWA install remains available and is usually simpler: visit the site in Android Chrome and choose **Install app** from the browser menu.
+
 ## Limits
 
 Tour dates are a fan-curated snapshot and may become outdated. There are no ticket checkout or shopping links. Favourites remain local to one browser/device. Social channels open externally and are not embedded.
