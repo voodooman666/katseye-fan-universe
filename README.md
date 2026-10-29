@@ -1,6 +1,6 @@
 # KATSEYE Fan Universe
 
-An unofficial, fan-made KATSEYE PWA. This project is not affiliated with KATSEYE, HYBE, Geffen Records or their management. It uses no backend, framework, build tools, API keys or paid services. Member photos and album art load from their official source hosts; tour dates load through the public Seated widget used on KATSEYE’s official tour page. Those features need an internet connection.
+An unofficial, fan-made KATSEYE PWA. This project is not affiliated with KATSEYE, HYBE, Geffen Records or their management. It uses no backend, framework, build tools, API keys or paid services. Member photos and album art load from their official source hosts. The tour list is a read-only snapshot that is updated manually.
 
 ## Run locally on Windows
 
@@ -12,11 +12,12 @@ PWA install and service-worker features need HTTPS (or localhost). The local pag
 
 ## Features
 
-- Responsive magazine-style home, journey timeline, member cards, albums, favourites, tour schedule and official social links.
+- Responsive magazine-style home, journey timeline, interactive member profiles, albums, favourites, read-only tour schedule and official social links.
+- Click a member poster to open a profile with her official KATSEYE charm and a sourced fun fact.
 - Six-member home slideshow with previous/next, pause and reduced-motion behavior.
 - Favourites saved in this browser under `katseye-fan-universe-favourites-v1`.
 - Per-track official YouTube links when found; no lyrics are included.
-- Current tour event widget from the official public Seated feed. It refreshes when the page loads; the official schedule link remains available as a fallback.
+- Fan-curated tour schedule snapshot with no ticket purchase or shopping links. It is not live and must be manually checked and updated.
 - Installable PWA manifest, home-screen icons, and service worker for caching the app shell.
 
 ## Edit and extend
@@ -24,7 +25,8 @@ PWA install and service-worker features need HTTPS (or localhost). The local pag
 - Change layout and visual styles in `styles.css`.
 - Edit page sections and navigation in `index.html`.
 - Edit member records, album tracks, favourite behavior and interactions in `app.js`.
-- The Seated artist widget ID is in the Tour section of `index.html`; if KATSEYE changes providers or IDs, update it from their official tour page.
+- Member charm names are from KATSEYE's official charms page; short background facts link to Netflix Tudum's 2025 guide. Recheck sources before editing these details.
+- Tour dates in `app.js` are a read-only snapshot checked 30 October 2026. Manually update the date stamp and entries when verifying the official schedule; do not add ticket or shop URLs.
 - After changing app-shell files, increase `CACHE_NAME` in `sw.js` so installed copies fetch the new version.
 - Keep factual details sourced and attributed. Do not add lyrics or unlicensed photos.
 
@@ -36,5 +38,5 @@ On Android, open the HTTPS site in Chrome and choose the browser menu → Instal
 
 ## Limits
 
-Tour dates are supplied by a third-party official event widget; they are not copied into this app. The widget needs internet and may change. Confirm dates, venue details and ticket availability at the official schedule before travelling. Favourites remain local to one browser/device. Social channels open externally and are not embedded.
+Tour dates are a fan-curated snapshot and may become outdated. There are no ticket checkout or shopping links. Favourites remain local to one browser/device. Social channels open externally and are not embedded.
 

@@ -1,10 +1,27 @@
 const members = [
-  { id: "daniela", name: "Daniela", initial: "D", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Daniela_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/daniela_avanzini/", note: "A member of KATSEYE’s six-person lineup.", glow: "rgba(241,151,192,.45)", shade: "#493047" },
-  { id: "lara", name: "Lara", initial: "L", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Lara_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/lararajj/", note: "A member of KATSEYE’s six-person lineup.", glow: "rgba(198,168,255,.42)", shade: "#39304e" },
-  { id: "manon", name: "Manon", initial: "M", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Manon_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/meretmanon/", note: "A member of KATSEYE’s six-person lineup.", glow: "rgba(234,175,208,.42)", shade: "#4a3046" },
-  { id: "megan", name: "Megan", initial: "M", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Megan_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/meganskiendiel/", note: "A member of KATSEYE’s six-person lineup.", glow: "rgba(199,180,255,.4)", shade: "#39334d" },
-  { id: "sophia", name: "Sophia", initial: "S", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Sophia_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/sophia_laforteza/", note: "A member of KATSEYE’s six-person lineup.", glow: "rgba(245,174,202,.4)", shade: "#4b303e" },
-  { id: "yoonchae", name: "Yoonchae", initial: "Y", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Yoonchae_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/y0on_cha3/", note: "A member of KATSEYE’s six-person lineup.", glow: "rgba(187,171,255,.4)", shade: "#37304a" }
+  { id: "daniela", name: "Daniela", initial: "D", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Daniela_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/daniela_avanzini/", charm: "Guardian Shield", charmNote: "Courage, loyalty and a protective heart.", fact: "A 2025 Netflix Tudum member guide notes that she is double-jointed in her left hand.", glow: "rgba(241,151,192,.45)", shade: "#493047" },
+  { id: "lara", name: "Lara", initial: "L", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Lara_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/lararajj/", charm: "Limitless Key", charmNote: "Curiosity, compassion and a love of discovery.", fact: "Netflix Tudum’s 2025 member guide describes her as having near-perfect pitch.", glow: "rgba(198,168,255,.42)", shade: "#39304e" },
+  { id: "manon", name: "Manon", initial: "M", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Manon_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/meretmanon/", charm: "Stellar Tiara", charmNote: "Warmth, grace and quiet confidence.", fact: "A fun detail shared in Netflix Tudum’s 2025 member guide: she can wiggle her ears.", glow: "rgba(234,175,208,.42)", shade: "#4a3046" },
+  { id: "megan", name: "Megan", initial: "M", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Megan_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/meganskiendiel/", charm: "Dual Cherry", charmNote: "Wit, confidence and lively energy.", fact: "Netflix Tudum’s 2025 member guide says she began learning hula and Tahitian dance very young.", glow: "rgba(199,180,255,.4)", shade: "#39334d" },
+  { id: "sophia", name: "Sophia", initial: "S", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Sophia_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/sophia_laforteza/", charm: "Dream Anchor", charmNote: "Kindness, steadiness and thoughtful guidance.", fact: "One instrument Sophia has said she would love to learn is the violin.", glow: "rgba(245,174,202,.4)", shade: "#4b303e" },
+  { id: "yoonchae", name: "Yoonchae", initial: "Y", photo: "https://www.katseye.world/wp-content/uploads/sites/2863/2024/06/06.09.Yoonchae_slide1-sm-compressed.jpg", instagram: "https://www.instagram.com/y0on_cha3/", charm: "Soothing Shell", charmNote: "Authenticity, gentleness and a calm presence.", fact: "Netflix Tudum’s 2025 member guide says she enjoys drawing what music inspires her to imagine.", glow: "rgba(187,171,255,.4)", shade: "#37304a" }
+];
+const tourEvents = [
+  ["2026-10-30", "30 Oct 2026", "Bell Centre", "Montreal, Canada"], ["2026-11-01", "1 Nov 2026", "TD Coliseum", "Hamilton, Canada"],
+  ["2026-11-03", "3 Nov 2026", "Little Caesars Arena", "Detroit, USA"], ["2026-11-05", "5 Nov 2026", "United Center", "Chicago, USA"],
+  ["2026-11-07", "7 Nov 2026", "Target Center", "Minneapolis, USA"], ["2026-11-10", "10 Nov 2026", "Moody Center", "Austin, USA"],
+  ["2026-11-11", "11 Nov 2026", "American Airlines Center", "Dallas, USA"], ["2026-11-14", "14 Nov 2026", "Grand Garden Arena", "Las Vegas, USA"],
+  ["2026-11-17", "17 Nov 2026", "Climate Pledge Arena", "Seattle, USA"], ["2026-11-19", "19 Nov 2026", "Oakland Arena", "Oakland, USA"],
+  ["2026-11-21", "21 Nov 2026", "Crypto.com Arena", "Los Angeles, USA"], ["2026-11-22", "22 Nov 2026", "Crypto.com Arena", "Los Angeles, USA"],
+  ["2026-11-24", "24 Nov 2026", "Mortgage Matchup Center", "Phoenix, USA"], ["2026-11-27", "27 Nov 2026", "Palacio de los Deportes", "Mexico City, Mexico"],
+  ["2026-11-28", "28 Nov 2026", "Palacio de los Deportes", "Mexico City, Mexico"], ["2026-12-01", "1 Dec 2026", "106.1 KISS FM’s Jingle Ball", "Fort Worth, USA"],
+  ["2027-01-23", "23–24 Jan 2027", "Lollapalooza", "Mumbai, India"], ["2027-01-27", "27 Jan 2027", "Yokohama Arena", "Yokohama, Japan"],
+  ["2027-01-29", "29 Jan 2027", "SM Mall of Asia Arena", "Manila, Philippines"], ["2027-02-01", "1 Feb 2027", "AsiaWorld-Arena", "Hong Kong"],
+  ["2027-02-04", "4 Feb 2027", "KSPO Dome", "Seoul, South Korea"], ["2027-02-07", "7 Feb 2027", "SM Seaside Cebu Arena", "Cebu, Philippines"],
+  ["2027-02-10", "10 Feb 2027", "Singapore Indoor Stadium", "Singapore"], ["2027-02-12", "12 Feb 2027", "IMPACT Arena", "Bangkok, Thailand"],
+  ["2027-02-14", "14 Feb 2027", "Messe Taoyuan", "Taipei, Taiwan"], ["2027-02-24", "24 Feb 2027", "Rod Laver Arena", "Melbourne, Australia"],
+  ["2027-02-28", "28 Feb 2027", "Afterpay Arena", "Sydney, Australia"], ["2027-03-05", "5 Mar 2027", "Spark Arena", "Auckland, New Zealand"],
+  ["2027-08-13", "13–14 Aug 2027", "Orange Warsaw Festival", "Warsaw, Poland"]
 ];
 const albums = [
   { title: "WILD", type: "Third EP · 2026", cover: "https://www.katseye.world/wp-content/uploads/sites/2863/2026/04/DSP_Standard_image-1000pox-compressed.jpg", tracks: [
@@ -32,15 +49,25 @@ function renderMembers() {
   memberGrid.innerHTML = members.map(member => {
     const selected = favourites.includes(member.id);
     return `<article class="member-card">
-      <div class="member-portrait" style="--glow:${member.glow};--shade:${member.shade}">
-        <img src="${member.photo}" alt="${member.name}" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-        <span class="member-initial" aria-hidden="true" hidden>${member.initial}</span>
-      </div>
-      <div class="member-info"><div class="member-top"><h3>${member.name}</h3>
+      <button class="member-poster-open" type="button" data-profile="${member.id}" aria-label="Open ${member.name}'s profile" aria-haspopup="dialog">
+        <span class="member-portrait" style="--glow:${member.glow};--shade:${member.shade}">
+          <img src="${member.photo}" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+          <span class="member-initial" aria-hidden="true" hidden>${member.initial}</span><span class="poster-caption" aria-hidden="true">View profile ↗</span>
+        </span>
+      </button>
+      <div class="member-info"><div class="member-top"><h3><button class="member-name-open" type="button" data-profile="${member.id}" aria-haspopup="dialog">${member.name}</button></h3>
         <button class="favourite-button" type="button" data-favourite="${member.id}" aria-pressed="${selected}" aria-label="${selected ? "Remove" : "Add"} ${member.name} ${selected ? "from" : "to"} favourites">${selected ? "♥" : "♡"}</button>
-      </div><p>${member.note}</p></div>
+      </div><p>Charm: <span>${member.charm}</span></p></div>
     </article>`;
   }).join("");
+}
+function renderTour() {
+  const today = new Date();
+  const upcoming = tourEvents.filter(([iso]) => new Date(`${iso}T23:59:59`) >= today);
+  const container = document.querySelector("#tour-events");
+  const checked = document.querySelector("#tour-checked");
+  checked.textContent = "Fan-curated snapshot · checked 30 October 2026";
+  container.innerHTML = upcoming.length ? upcoming.map(([, date, venue, place]) => `<article class="tour-event"><time>${date}</time><div><strong>${venue}</strong><span>${place}</span></div><span class="tour-tag">Listed</span></article>`).join("") : `<div class="empty-state"><strong>No upcoming dates in this saved list</strong>The schedule is a fan-curated snapshot. Check official announcements for newly added dates.</div>`;
 }
 function renderAlbums() {
   albumGrid.innerHTML = albums.map((album, index) => `<article class="album-card">
@@ -63,14 +90,50 @@ function renderFavourites() {
 function update() {
   try { localStorage.setItem(storageKey, JSON.stringify(favourites)); } catch { /* The current page remains usable if storage is unavailable. */ }
   renderMembers(); renderFavourites();
+  if (activeProfileId) renderMemberProfile(activeProfileId);
 }
 document.addEventListener("click", event => {
+  const profileButton = event.target.closest("[data-profile]");
+  if (profileButton) { openMemberProfile(profileButton.dataset.profile); return; }
   const button = event.target.closest("[data-favourite]");
   if (!button) return;
   const id = button.dataset.favourite;
   favourites = favourites.includes(id) ? favourites.filter(item => item !== id) : [...favourites, id];
   update();
 });
+const memberDialog = document.querySelector("#member-profile-dialog");
+let activeProfileId = null;
+function renderMemberProfile(id) {
+  const member = members.find(item => item.id === id);
+  if (!member) return;
+  document.querySelector("#profile-name").textContent = member.name;
+  document.querySelector("#profile-charm").textContent = member.charm;
+  document.querySelector("#profile-charm-note").textContent = member.charmNote;
+  document.querySelector("#profile-fact").textContent = member.fact;
+  const photo = document.querySelector("#profile-photo");
+  photo.src = member.photo;
+  photo.alt = `Official KATSEYE member portrait of ${member.name}`;
+  photo.hidden = false;
+  document.querySelector("#profile-initial").hidden = true;
+  photo.onerror = () => { photo.hidden = true; document.querySelector("#profile-initial").hidden = false; };
+  const instagram = document.querySelector("#profile-instagram");
+  instagram.href = member.instagram;
+  instagram.setAttribute("aria-label", `${member.name} on Instagram (opens external site)`);
+  const favouriteButton = document.querySelector("#profile-favourite");
+  const selected = favourites.includes(id);
+  favouriteButton.dataset.favourite = id;
+  favouriteButton.setAttribute("aria-pressed", String(selected));
+  favouriteButton.textContent = selected ? "♥ In favourites" : "♡ Add to favourites";
+  favouriteButton.setAttribute("aria-label", selected ? `Remove ${member.name} from favourites` : `Add ${member.name} to favourites`);
+}
+function openMemberProfile(id) {
+  activeProfileId = id;
+  renderMemberProfile(id);
+  if (!memberDialog.open) memberDialog.showModal();
+}
+document.querySelector("#profile-close").addEventListener("click", () => memberDialog.close());
+memberDialog.addEventListener("close", () => { activeProfileId = null; });
+memberDialog.addEventListener("click", event => { if (event.target === memberDialog) memberDialog.close(); });
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector("#site-nav");
 menuToggle.addEventListener("click", () => {
@@ -82,7 +145,7 @@ menuToggle.addEventListener("click", () => {
 siteNav.addEventListener("click", event => {
   if (event.target.closest("a")) { siteNav.classList.remove("open"); menuToggle.setAttribute("aria-expanded", "false"); menuToggle.setAttribute("aria-label", "Open navigation"); }
 });
-renderMembers(); renderAlbums(); renderFavourites();
+renderMembers(); renderAlbums(); renderFavourites(); renderTour();
 
 const heroSlides = [...document.querySelectorAll(".hero-slide")];
 const slideStatus = document.querySelector("#hero-slide-status");
