@@ -30,7 +30,7 @@ PWA install and service-worker features need HTTPS (or localhost). The local pag
 
 ## Install and host for phone use
 
-This is an installable Progressive Web App (PWA), not a native APK. GitHub Pages is a no-cost static host option. GitHub Free requires a public repository for Pages, so the source files will be public too. Create a GitHub repository, upload these site files to its root, then enable Pages for the `main` branch and `/ (root)` in Settings → Pages. The site URL will look like `https://<account>.github.io/<repository>/`.
+This is an installable Progressive Web App (PWA), not a native APK. It is hosted on GitHub Pages at <https://voodooman666.github.io/katseye-fan-universe/>. Its source is public in <https://github.com/voodooman666/katseye-fan-universe> because GitHub Free Pages requires a public repository. Later updates can be published by committing changed files to the `main` branch.
 
 On Android, open the HTTPS site in Chrome and choose the browser menu → Install app (or Add to Home screen). On iPhone, open it in Safari and choose Share → Add to Home Screen.
 
