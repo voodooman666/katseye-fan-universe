@@ -14,6 +14,7 @@ PWA install and service-worker features need HTTPS (or localhost). The local pag
 
 - Responsive magazine-style home, journey timeline, interactive member profiles, albums, favourites, read-only tour schedule and official social links.
 - Click a member poster to open a profile with her official KATSEYE charm and a sourced fun fact.
+- Play a four-question, local-only fan quiz that summarizes the answers and pairs them with a member. The match is just for fun; answers are not saved or sent.
 - Six-member home slideshow with previous/next, pause and reduced-motion behavior.
 - Favourites saved in this browser under `katseye-fan-universe-favourites-v1`.
 - Per-track official YouTube links when found; no lyrics are included.
@@ -47,4 +48,5 @@ The free PWA install remains available and is usually simpler: visit the site in
 ## Limits
 
 Tour dates are a fan-curated snapshot and may become outdated. There are no ticket checkout or shopping links. Favourites remain local to one browser/device. Social channels open externally and are not embedded.
+
 
