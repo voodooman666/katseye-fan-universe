@@ -65,6 +65,102 @@ const albums = [
   ]}
 ];
 const storageKey = "katseye-fan-universe-favourites-v1";
+const quizQuestions = [
+  { prompt: "Pick a little creative project.", answers: [
+    { label: "Put together a dance routine", summary: "dance and movement", member: "daniela" },
+    { label: "Make a playlist or moodboard", summary: "music and creative ideas", member: "lara" },
+    { label: "Try a new art or craft", summary: "trying something imaginative", member: "megan" },
+    { label: "Plan a mini photo story", summary: "turning moments into a story", member: "sophia" }
+  ] },
+  { prompt: "In a group activity, what sounds most fun?", answers: [
+    { label: "Bring the energy", summary: "bringing lively energy", member: "daniela" },
+    { label: "Help everyone feel included", summary: "making room for everyone", member: "sophia" },
+    { label: "Notice all the little details", summary: "spotting thoughtful details", member: "manon" },
+    { label: "Dream up an unexpected idea", summary: "following a surprising idea", member: "lara" }
+  ] },
+  { prompt: "Choose a favorite kind of reset.", answers: [
+    { label: "Move around to a favorite song", summary: "a music-filled reset", member: "megan" },
+    { label: "Quiet time with a sketchbook", summary: "a calm, creative moment", member: "yoonchae" },
+    { label: "Take a walk somewhere new", summary: "a little exploration", member: "manon" },
+    { label: "Have a cozy catch-up", summary: "time with people you enjoy", member: "sophia" }
+  ] },
+  { prompt: "Choose a scene for your fan-made universe.", answers: [
+    { label: "Sparkling stage lights", summary: "bright stage energy", member: "daniela" },
+    { label: "Soft sunset colors", summary: "soft colors and a relaxed mood", member: "yoonchae" },
+    { label: "Playful pops of color", summary: "playful details", member: "megan" },
+    { label: "A quiet sky full of stars", summary: "a peaceful atmosphere", member: "manon" }
+  ] }
+];
+const quizAnswers = Array(quizQuestions.length).fill(null);
+let quizStep = 0;
+let activeQuizMatch = null;
+const quizForm = document.querySelector("#member-quiz");
+const quizQuestionHost = document.querySelector("#quiz-question-host");
+const quizResult = document.querySelector("#quiz-result");
+function renderQuizQuestion() {
+  const question = quizQuestions[quizStep];
+  document.querySelector("#quiz-step-label").textContent = `Question ${quizStep + 1} of ${quizQuestions.length}`;
+  document.querySelector("#quiz-progress").value = quizStep + 1;
+  document.querySelector("#quiz-back").hidden = quizStep === 0;
+  document.querySelector("#quiz-next").textContent = quizStep === quizQuestions.length - 1 ? "See my match →" : "Next question →";
+  document.querySelector("#quiz-error").hidden = true;
+  quizQuestionHost.innerHTML = `<fieldset class="quiz-question"><legend tabindex="-1">${question.prompt}</legend><div class="quiz-options">${question.answers.map((answer, index) => `<label class="quiz-option"><input type="radio" name="quiz-answer" value="${index}" ${quizAnswers[quizStep] === index ? "checked" : ""}><span>${answer.label}</span></label>`).join("")}</div></fieldset>`;
+}
+function showQuizResult() {
+  const scores = Object.fromEntries(members.map(member => [member.id, 0]));
+  const selectedAnswers = quizAnswers.map((answerIndex, questionIndex) => quizQuestions[questionIndex].answers[answerIndex]);
+  selectedAnswers.forEach(answer => { scores[answer.member] += 1; });
+  const bestScore = Math.max(...Object.values(scores));
+  const tiedIds = Object.keys(scores).filter(id => scores[id] === bestScore);
+  const finalAnswerMember = selectedAnswers[selectedAnswers.length - 1].member;
+  activeQuizMatch = members.find(member => tiedIds.includes(finalAnswerMember)) || members.find(member => tiedIds.includes(member.id));
+  document.querySelector("#quiz-member-name").textContent = activeQuizMatch.name;
+  document.querySelector("#quiz-summary").textContent = `Your choices leaned toward ${selectedAnswers.map(answer => answer.summary).join(", ")}.`;
+  const photo = document.querySelector("#quiz-member-photo");
+  const initial = document.querySelector("#quiz-member-initial");
+  photo.hidden = false;
+  initial.hidden = true;
+  photo.src = activeQuizMatch.photo;
+  photo.alt = `Official KATSEYE member portrait of ${activeQuizMatch.name}`;
+  photo.onerror = () => { photo.hidden = true; initial.textContent = activeQuizMatch.initial; initial.hidden = false; };
+  quizForm.hidden = true;
+  quizResult.hidden = false;
+  updateQuizFavouriteButton();
+}
+function updateQuizFavouriteButton() {
+  if (!activeQuizMatch) return;
+  const button = document.querySelector("#quiz-add-favourite");
+  const selected = favourites.includes(activeQuizMatch.id);
+  button.dataset.favourite = activeQuizMatch.id;
+  button.setAttribute("aria-pressed", String(selected));
+  button.textContent = selected ? "♥ Remove from favourites" : "♡ Add to favourites";
+}
+quizForm.addEventListener("submit", event => {
+  event.preventDefault();
+  const selected = quizForm.querySelector('input[name="quiz-answer"]:checked');
+  if (!selected) { document.querySelector("#quiz-error").hidden = false; return; }
+  quizAnswers[quizStep] = Number(selected.value);
+  if (quizStep < quizQuestions.length - 1) {
+    quizStep += 1;
+    renderQuizQuestion();
+    quizQuestionHost.querySelector("legend")?.focus();
+  } else {
+    showQuizResult();
+  }
+});
+document.querySelector("#quiz-back").addEventListener("click", () => {
+  if (quizStep > 0) { quizStep -= 1; renderQuizQuestion(); quizQuestionHost.querySelector("input:checked")?.focus(); }
+});
+document.querySelector("#quiz-restart").addEventListener("click", () => {
+  quizAnswers.fill(null);
+  quizStep = 0;
+  activeQuizMatch = null;
+  quizResult.hidden = true;
+  quizForm.hidden = false;
+  renderQuizQuestion();
+  quizQuestionHost.querySelector("input")?.focus();
+});
+renderQuizQuestion();
 const readFavourites = () => {
   try { const saved = JSON.parse(localStorage.getItem(storageKey) || "[]"); return Array.isArray(saved) ? saved.filter(id => members.some(member => member.id === id)) : []; }
   catch { return []; }
@@ -121,6 +217,7 @@ function update() {
   try { localStorage.setItem(storageKey, JSON.stringify(favourites)); } catch { /* The current page remains usable if storage is unavailable. */ }
   renderMembers(); renderFavourites();
   if (activeProfileId) renderMemberProfile(activeProfileId);
+  updateQuizFavouriteButton();
 }
 document.addEventListener("click", event => {
   const profileButton = event.target.closest("[data-profile]");
@@ -240,5 +337,6 @@ window.addEventListener("appinstalled", () => {
   installButton.hidden = true;
   pendingInstallPrompt = undefined;
 });
+
 
 
