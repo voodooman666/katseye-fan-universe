@@ -23,7 +23,7 @@
     <a class="brand" href="#home" aria-label="KATSEYE Fan Universe home"><span class="brand-mark">✦</span><span>KATSEYE <i>fan universe</i></span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a href="#home">Home</a><a href="#journey">The Journey</a><a href="#members">Members</a><a href="#music">Music</a><a href="#tour">Tour</a><a href="#favourites">Favourites <span class="nav-count" aria-label="favourites count">0</span></a><a href="#social">Social</a>
+      <a href="#home">Home</a><a href="#journey">The Journey</a><a href="#members">Members</a><a href="#quiz">Fan Quiz</a><a href="#music">Music</a><a href="#tour">Tour</a><a href="#favourites">Favourites <span class="nav-count" aria-label="favourites count">0</span></a><a href="#social">Social</a>
     </nav>
   </header>
   <main id="main">
@@ -73,6 +73,22 @@
         <p class="profile-sources">Public names and where members are described as from: <a href="https://www.katseye.world/story-of-katseye/" target="_blank" rel="noopener noreferrer">KATSEYE’s official story</a> and <a href="https://www.netflix.com/tudum/articles/dream-academy-girl-group-member-guide" target="_blank" rel="noopener noreferrer">Netflix Tudum</a>. “From” is a hometown/origin label, not a verified birthplace or legal nationality claim. Height and star sign were reported in <a href="https://www.netflix.com/tudum/articles/pop-star-academy-katseye-trainees-cast-instagrams" target="_blank" rel="noopener noreferrer">Tudum’s 2025 guide</a>; height may have changed. Birthdays are attributed to artist-managed profile cards by <a href="https://k-crush.com/katseye-ages-birthdays/" target="_blank" rel="noopener noreferrer">K-Crush</a>; ages update automatically from the listed date. Favorite food/color and natural hair/eye colors are not listed in the checked sources, so they are left unfilled.</p>
       </div>
     </dialog>
+    <section id="quiz" class="section-wrap content-section quiz-section" aria-labelledby="quiz-title">
+      <div class="section-heading"><div><p class="eyebrow">Just for fun</p><h2 id="quiz-title">Find your fan match</h2></div><p>Answer four quick questions, then see which member your choices pair you with.</p></div>
+      <div class="quiz-panel">
+        <p class="quiz-note">No right answers, no personal questions, and nothing is saved or sent anywhere. This is a fan-made game, not a description of the members’ personalities.</p>
+        <form id="member-quiz" novalidate>
+          <div class="quiz-progress-row"><span id="quiz-step-label">Question 1 of 4</span><progress id="quiz-progress" max="4" value="1" aria-label="Quiz progress"></progress></div>
+          <div id="quiz-question-host"></div>
+          <p id="quiz-error" class="quiz-error" role="alert" hidden>Please choose an answer to continue.</p>
+          <div class="quiz-controls"><button id="quiz-back" class="quiz-secondary" type="button" hidden>← Back</button><button id="quiz-next" class="button button-primary" type="submit">Next question →</button></div>
+        </form>
+        <div id="quiz-result" class="quiz-result" aria-live="polite" hidden>
+          <div class="quiz-result-photo"><img id="quiz-member-photo" alt="" loading="lazy"><span id="quiz-member-initial" aria-hidden="true" hidden></span></div>
+          <div class="quiz-result-copy"><p class="eyebrow">Your fan-made match</p><h3 id="quiz-member-name"></h3><p id="quiz-summary"></p><p class="quiz-disclaimer">A playful pairing based on your answers—just for fun.</p><div class="quiz-result-actions"><button id="quiz-restart" class="button button-primary" type="button">Try again</button><button id="quiz-add-favourite" class="quiz-secondary" type="button">♡ Add to favourites</button></div></div>
+        </div>
+      </div>
+    </section>
     <section id="music" class="section-wrap content-section music-section"><div class="section-heading"><div><p class="eyebrow">Press play</p><h2>Music</h2></div><p>EP artwork and track lists.<br>Links go to official YouTube uploads when found.</p></div><div id="album-grid" class="album-grid"></div><p class="source-note">Artwork is linked from official KATSEYE release pages or the official Spotify album page. Catalogue and releases: <a href="https://www.katseye.world/music/" target="_blank" rel="noreferrer">KATSEYE official music</a>.</p></section>
 <section id="tour" class="section-wrap content-section tour-section"><div class="section-heading"><div><p class="eyebrow">Where to catch a show</p><h2>Tour Schedule</h2></div><p id="tour-checked">Fan-curated snapshot</p></div><div class="tour-readonly-note"><span aria-hidden="true">✦</span> Read-only schedule · no ticket or shopping links</div>
     <div id="tour-events" class="tour-events" aria-live="polite"></div>
@@ -83,6 +99,7 @@
   <footer class="site-footer"><a class="brand" href="#home"><span class="brand-mark">✦</span><span>KATSEYE <i>fan universe</i></span></a><p>Unofficial, fan-made and not affiliated with KATSEYE or its management.</p><a class="back-top" href="#home">Back to top ↑</a></footer>
 </body>
 </html>
+
 
 
 
